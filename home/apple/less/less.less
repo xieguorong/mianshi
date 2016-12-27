@@ -1,0 +1,88 @@
+@import "var.less";
+*{
+  box-sizing:border-box;
+}
+.container{
+  &{
+    width:100%;
+    margin:auto;
+  }
+  &>.row{
+    width:100%;
+    .clear();
+  }
+  &-fluid{
+    width:100%;
+  }
+
+}
+//大屏
+.loop();
+.col-s-hide{
+  display:none;
+}
+.col-m-hide{
+  display:block;
+}
+.col-l-hide{
+  display:block;
+}
+//中屏
+@media screen and (max-width:@num1){
+  .container{
+    width:100%;
+  }
+  .loop(m);
+  .col-s-hide{
+    display:none;
+  }
+  .col-m-hide{
+    display:none;
+  }
+  .col-l-hide{
+    display:block;
+  }
+}
+
+//最小屏
+@media screen and (max-width:@num2){
+  .container{
+    width:100%;
+  }
+  .loop(l);
+  .col-s-hide{
+    display:block;
+  }
+  .col-m-hide{
+    display:none;
+  }
+  .col-l-hide{
+    display:none;
+  }
+  .col-l-show{
+    display:block;
+  }
+}
+
+//栅格化的核心
+.loop(@type:s,@i:1) when (@i<=@cols){
+  .container>.row>.col-@{type}-@{i}{
+    float:left;
+    width:@i/@cols*100%;
+  }
+  .container-fluid>.row>.col-@{type}-@{i}{
+    float:left;
+    width:@i/@cols*100%;
+  }
+  .loop(@type,@i+1);
+}
+
+//清除浮动
+.clear(){
+  &:before,&:after{
+    content:"";display:block;
+  }
+  &:after{
+    clear:both;
+  }
+}

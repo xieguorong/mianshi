@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>酷跑游戏</title>
+     <script src="js/jquery-3.1.0.js"> </script>
+     <script src="js/hitPix.js"> </script>
+      <script src="js/index.js"> </script>
+    <script src="js/game.js"> </script>
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+      <style>
+      body,html,li{
+      	width: 100%;
+      	height:100%;
+      	padding:0;
+      	margin: 0;
+       overflow: hidden;
+      }
+       canvas{
+       	background: url(img/bg.jpg) repeat-x;
+        background-size:100% 100%;
+       }
+       .start{
+           width:40%;
+           height:60%;position: fixed;
+           left: 0;
+           right:0;
+           top:0;
+           bottom: 0;
+           margin: auto;
+           z-index: 999;
+           background:url("img/muban.png") no-repeat;
+           background-size: 100% 100%;
+            display: none;
+       }
+       .start .close{
+          width:30px;
+           height:30px;
+           position: absolute;
+           right:30px;
+           top:20px;
+           cursor: pointer;
+       }
+      .start .title{
+          width:200px;
+          height:53px;
+          margin: 0 auto;
+          margin-top:5%;
+          cursor: pointer;
+      }
+      .start .zi{
+          width:517px;
+          height:280px;
+          margin:0 auto;
+          margin-top: 10px;
+          cursor: pointer;
+      }
+          @keyframes start {
+              0%{
+                  transform: translate(0,-1000px);
+              }
+              100%{
+                  transform: translate(0,0px);
+              }
+          }
+      @keyframes start1 {
+          0%{
+              transform: translate(0,0px);
+          }
+          100%{
+              transform: translate(0,-1000px);
+          }
+      }
+      .mask{
+          width: 100%;
+          height: 100%;
+          position: fixed;
+          left: 0;
+          bottom: 0;
+          animation: mask 0.5s forwards;
+          display: none;
+      }
+      .mask .over{
+          width:860px;
+          height:400px;
+          position: absolute;
+          left:0;
+          top:0;
+          right: 0;
+          bottom:0;
+          margin: auto;
+      }
+          @keyframes mask {
+             0%{
+                background: rgba(0,0,0,0.5);
+             }
+              100%{
+                  background: rgba(0,0,0,0.8);
+              }
+          }
+
+      .btn{
+        width:230px;
+        height:100px;
+        position: absolute;
+        bottom:8%;
+        right:40%;
+        font-size:50px;
+        color:white;
+        font-weight: bold;
+       cursor: pointer;
+      }
+      .btn:before{
+        content: "";
+        width: 57px;
+        height: 72px;
+        position: absolute;
+        left:20px;
+        bottom: -70px;
+        -webkit-animation: move 1s ease infinite;
+        -o-animation: move 1s ease infinite;
+        animation: move 1s ease infinite;
+        background: url(img/shou.png) no-repeat;
+      }
+      @keyframes move{
+        0%{
+          transform: translate(20px,0px);
+        }
+        100%{
+          transform:translate(200px,0);
+        }
+      }
+      .music, .wen{
+        width:40px;
+        height:40px;
+        position: absolute;
+        right: 5px;
+        top:6px;
+        z-index: 9999;
+          cursor: pointer;
+      }
+      .music li{
+           cursor: pointer;
+          position: absolute;
+          left:0;
+          top:0;
+      }
+      .wen{
+          right:50px; 
+          background: url(img/wen.png) no-repeat;
+      }
+      .jifen{
+        width:152px;
+        height:60px;
+        background: url(img/score.png) no-repeat; 
+        position: absolute;
+       right: 35px;
+        top: 50px;
+        z-index: 9999;
+        display: none;
+        line-height: 60px;
+        color: #000;
+        text-align: center;
+        font-size: 20px;
+        font-family: "Helvetica Neue",Helvetica, Arial, sans-serif;
+      }
+      .life{
+         width:150px;
+    height:10px;
+    display: inline-block;
+   position: absolute;
+   left: 20px;
+   top:20px;
+    background:#4B4E57;
+    display: none;
+    border-radius:5px;
+    border: 2px solid #6A6078;
+      }
+      .pres{
+        width: 100%;
+    height: 100%;
+      border-radius:5px;
+       border: 2px solid #6A6078;
+    background: linear-gradient(#EA73F3, #7E22A7);
+    float:left;
+}
+   .back{
+       width:100px;
+       height:100px;
+       position: absolute;
+       right:100px;
+       bottom:50px;
+       cursor: pointer;
+       background: url("img/back.png") no-repeat;
+       background-size:100% 100%;
+
+   }
+   .mingg{
+    width:460px;
+    height:260px;
+    position:absolute;
+    left:460px;
+   top:170px;
+    font-size: 100px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 260px;
+   }
+      </style>
+</head>
+<body>
+<audio src="audio/music_bg.mp3" class="runa" loop></audio>
+<audio src="audio/over.mp3" class="hita"></audio>
+    <canvas ></canvas>
+    <div class="btn">开始游戏
+    </div>
+    <div class="wen"></div>
+    <!--检测像素，比html运行的快，对象画布只需运行一个-->
+    <div class="start">
+        <div class="close">
+            <img src="img/close.png" alt="">
+        </div>
+        <div class="title">
+            <img src="img/jieshao.png" alt="">
+        </div>
+        <div class="zi">
+            <img src="img/zi.png" alt="">
+        </div>
+    </div>
+    <div class="mask">
+         <div class="over"><img src="img/gameover.png" alt=""></div>
+    </div>
+    <div class="music">
+        <ul>
+          
+             <li class="onactive"><img src="img/off.png" alt=""></li>
+              <li class="active"><img src="img/onmusic.png" alt="" ></li>
+        </ul>
+    </div>
+    <div class="jifen">
+       0
+    </div>
+    <div class="mingg">酷跑游戏</div>
+    <div class="back"></div>
+   <!--  <div class="life">
+        <div class="pres"></div>
+    </div> -->
+    <img src="img/1.jpg" alt="" class="run" hidden>
+    <img src="img/2.jpg" alt="" class="run" hidden>
+    <img src="img/3.jpg" alt="" class="run" hidden>
+    <img src="img/4.jpg" alt="" class="run" hidden>
+    <img src="img/5.jpg" alt="" class="run" hidden>
+    <img src="img/6.jpg" alt="" class="run" hidden>
+    <img src="img/1.jpg" alt="" class="jump" hidden>
+
+   <!--障碍物-->
+    <img src="img/egg.png" alt="" class="hinder" hidden>
+    <img src="img/bomb.png" alt="" class="hinder" hidden>
+    <img src="img/grass.png" alt="" class="hinder" hidden>
+    <img src="img/flow.png" alt="" class="hinder" hidden>
+    <img src="img/tree.png" alt="" class="hinder" hidden>
+    <img src="img/stone.png" alt="" class="hinder" hidden>
+    <img src="img/mogu.png" alt="" class="hinder" hidden>
+    <img src="img/enemy.png" alt="" class="hinder" hidden>
+    <img src="img/pool.png" alt="" class="hinder" hidden>
+    <img src="img/zhi.png" alt="" class="zhi" hidden>
+</body>
+</html>

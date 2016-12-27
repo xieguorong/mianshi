@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" href="css/swiper.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <script src="js/swiper.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/swiper.animate.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+	<div class="swiper-container">
+		<div class="swiper-wrapper sss">
+			<div class="swiper-slide diyi">
+				<div class="wenn ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">结婚就挑你称心的</div>
+				<div class="tutu ani" swiper-animate-effect="bounceIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"></div>
+				<div class="wenw ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">极佳摄影团队<br />照亮你的爱
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="wenn ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">为你的她做好抉择</div>
+				<div class="tutu ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s" style="background:url(img/quanqiu.jpg);background-size:100% 100%"></div>
+				<div class="wenw ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">全球任你挑<br />留下爱的足迹
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="wenn ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">浪漫给你更多选择</div>
+				<div class="tutu ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s" style="background:url(img/2.jpg);background-size:100% 100%"></div>
+				<div class="wenw ani" swiper-animate-effect="wobble" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">更多服务<br/>让你们更加相爱
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="wenn ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">更多用户的选择</div>
+				<div class="tutu ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s" style="background:url(img/33.png);background-size:100% 100%"></div>
+				<div class="wenw ani" swiper-animate-effect="wobble" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"><a href="zhuce.html">点击注册</a>
+				</div>
+			</div>
+		</div>
+		<div class="swiper-pagination"></div>
+	</div>
+</body>
+<script>        
+  var mySwiper = new Swiper ('.swiper-container', {
+  onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+    swiperAnimateCache(swiper); //隐藏动画元素 
+    swiperAnimate(swiper); //初始化完成开始动画
+  }, 
+  onSlideChangeEnd: function(swiper){ 
+    swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+  } 
+  })        
+  </script>
+
+</html>

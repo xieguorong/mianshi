@@ -1,0 +1,118 @@
+html,body{
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+    overflow: hidden;
+}
+.scene{
+    width: 100%;
+    height:100%;
+    position: absolute;
+    left: 0;
+    top:0;
+    perspective:800px;
+}
+.scene .room{
+    width: 100%;
+    height:100%;
+    position: absolute;
+    left: 0;
+    top:0;
+    transform-style:preserve-3d;
+}
+.scene .room .panel{
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+.room .panel:nth-child(1){
+    transform-origin:top;
+    transform:rotateX(90deg);
+    background:url(../img/thb.jpg) no-repeat;
+    background-size:100% 100%;
+
+}
+.room .panel:nth-child(2){
+    background:url(../img/qiang.jpg) no-repeat;
+    background-size:100% 100%;
+    transform-origin:left;
+    transform:rotateY(-90deg);
+}
+.room .panel:nth-child(3){
+    background:url(../img/3.jpg) no-repeat;
+    background-size:100% 100%;
+}
+.room .panel:nth-child(4){
+     background:url(../img/qiang.jpg) no-repeat;
+    background-size:100% 100%;
+
+    transform-origin:right;
+    transform:rotateY(90deg);
+}
+.room .panel:nth-child(5){
+    background: blue;
+    transform-origin:bottom;
+    transform:rotateX(-90deg);
+    background:url(../img/db.jpg) no-repeat;
+    background-size:100% 100%;
+}
+.room .panel:nth-child(6){
+     background:url(../img/ch.png) no-repeat;
+    background-size:100% 100%;
+    transform:translateZ(-500px);
+}
+.left{
+    position: relative;
+}
+.tu1{
+display:block;
+    position: absolute;
+    right:85px;
+    top:50px;
+    width:180px;
+    height:65px;
+    font-family:'myicon';
+    font-size:30px;
+    z-index: 10;
+    text-decoration: none
+
+}
+.wangyi{
+display:block;
+    position:absolute;
+    right:285px;
+    top:100px;
+    width:110px;
+    height:65px;
+    font-family:'myicon';
+    font-size: 20px;
+    z-index: 10;
+    text-decoration: none
+
+}
+.app{
+    display:block;
+    position:absolute;
+    right:130px;
+    top:320px;
+    width:180px;
+    height:65px;
+    font-family:'myicon';
+    font-size: 35px;
+    z-index: 10;
+    text-decoration: none
+}
+@font-face {
+  font-family: "myicon";
+  src: url('font/iconfont.eot'); /* IE9*/
+  src: url('font/iconfont.eot?#iefix') format('embedded-opentype'), 
+  url('font/iconfont.woff') format('woff'),
+  url('font/iconfont.ttf') format('truetype'), 
+  url('font/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+.bike:before{
+    content:"\e617"
+}

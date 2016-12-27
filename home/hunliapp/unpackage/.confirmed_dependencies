@@ -1,0 +1,162 @@
+{
+	"index.html": {
+		"resources": [
+			"css/index.css",
+			"img/2.jpg",
+			"img/2.jpg",
+			"js/swiper.animate.min.js",
+			"img/33.png",
+			"img/sheying.jpg",
+			"img/p.jpg",
+			"css/animate.css",
+			"img/quanqiu.jpg",
+			"css/swiper.css",
+			"js/swiper.js",
+			"js/index.js",
+			"js/jquery.js",
+			"zhuce.html"
+		],
+		"refer": [
+			"zhuce.html"
+		]
+	},
+	"zhuce.html": {
+		"resources": [
+			"img/zhuce.jpg",
+			"img/bc.png",
+			"shouye.html"
+		],
+		"refer": [
+			"shouye.html"
+		]
+	},
+	"shouye.html": {
+		"resources": [
+			"img/wode.png",
+			"img/b1.jpg",
+			"img/wang1.jpg",
+			"img/84.jpg",
+			"img/gengduo.png",
+			"img/gengduo.png",
+			"img/jiudian.jpg",
+			"img/7c.jpg",
+			"img/shouye.png",
+			"img/sousuo.png",
+			"img/wang.jpg",
+			"img/gongju.png",
+			"img/shequ.png",
+			"img/wang2.jpg",
+			"js/mui.min.js",
+			"img/guang.png",
+			"css/mui.min.css",
+			"img/78.jpg",
+			"img/45.jpg",
+			"img/eb.jpg",
+			"pingjia.html",
+			"js/swiper.animate.min.js",
+			"img/quanqiu.jpg",
+			"css/swiper.css",
+			"img/2.jpg",
+			"list.html",
+			"zhuce.html",
+			"img/add.png",
+			"css/index.css",
+			"img/sheying.jpg",
+			"js/jquery.js",
+			"js/swiper.js",
+			"js/index.js"
+		],
+		"refer": [
+			"pingjia.html",
+			"list.html",
+			"zhuce.html"
+		]
+	},
+	"pingjia.html": {
+		"resources": [
+			"img/huifu.png",
+			"img/40.jpg",
+			"img/pic3.jpg",
+			"img/pic4.jpg",
+			"img/f0.jpg",
+			"img/pic1.jpg",
+			"img/pic.jpg",
+			"img/zan.png",
+			"img/fanhui.png",
+			"img/pic6.jpg",
+			"img/39.jpg",
+			"img/38.jpg",
+			"shouye.html",
+			"list.html",
+			"含mui的html.html"
+		],
+		"refer": [
+			"shouye.html",
+			"list.html",
+			"含mui的html.html"
+		]
+	},
+	"list.html": {
+		"resources": [
+			"img/31.png",
+			"img/608.png",
+			"img/549.png",
+			"img/59c.png",
+			"img/931.png",
+			"img/156.png",
+			"img/336.png",
+			"img/706.png",
+			"img/3b.jpg",
+			"xiangqing.html",
+			"img/fanhui.png",
+			"shouye.html",
+			"img/add.png",
+			"img/sousuo.png"
+		],
+		"refer": [
+			"xiangqing.html",
+			"shouye.html"
+		]
+	},
+	"xiangqing.html": {
+		"resources": [
+			"img/mb.jpg",
+			"img/nomark.jpg",
+			"img/mark.jpg",
+			"pingjia.html",
+			"含mui的html.html",
+			"css/mui.min.css",
+			"muihtml.html",
+			"img/wode.png",
+			"img/shouye.png",
+			"img/guang.png",
+			"img/gongju.png",
+			"img/shequ.png"
+		],
+		"refer": [
+			"pingjia.html",
+			"含mui的html.html",
+			"muihtml.html"
+		]
+	},
+	"muihtml.html": {
+		"resources": [
+			"img/zaixian.png",
+			"img/dingdan1.png",
+			"img/xihuan1.png",
+			"img/kaquan.png",
+			"img/yijian.png",
+			"img/jifen.png",
+			"img/tiezi.png",
+			"img/yu.png",
+			"fonts/mui.ttf",
+			"img/wenti.png",
+			"img/16.jpg",
+			"img/t1.jpg",
+			"pingjia.html"
+		],
+		"refer": [
+			"pingjia.html"
+		]
+	}
+}

@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	
+  .cat{
+  	width:500px;
+  	height:400px;
+  	position:absolute;
+  	left:0;
+  	top:0;
+  	bottom:0;
+  	right:0;
+  	margin:auto;
+  }
+  .face{
+  	width:314px;
+  	height:304px;
+  	margin:0 auto;
+  	border:2px solid #333;
+  	border-radius:164px;
+  	background:linear-gradient(to bottom left, #7FDDF4 5%,#09B8E3 80%,black);
+  	position: relative;
+  }
+  .mouse{
+  	width:268px;
+  	height:200px;
+  	background:linear-gradient(230deg, white 80%,#D6D6D6);;
+  	border:2px solid black;
+  	position: absolute;
+  	left:22px;
+  	top:85px;
+  	border-radius: 170px 170px
+  }
+  .eyesl{
+  	position: absolute;
+  	left:80px;
+  	top:42px;
+  	width:74px;
+  	height:87px;
+  	background: white;
+  	z-index:10;
+  	border:2px solid black;
+  	border-radius: 35px 35px
+  }
+  .eyesr{
+  	position: absolute;
+  	right:80px;
+  	top:42px;
+  	width:74px;
+  	height:87px;
+  	background: white;
+  	z-index:10;
+  	border:2px solid black;
+  	border-radius: 35px 35px
+  }
+  .qiu{
+  	width:15px;
+  	height:15px;
+  	border-radius:50%;
+  	background:black;
+  	position: absolute;
+  	left:45px;
+  	top:54px;
+    
+  }
+  .qiu1{
+  	width:15px;
+  	height:15px;
+  	border-radius:50%;
+  	background:black;
+  	position: absolute;
+  	right:45px;
+  	top:54px;
+    
+  }
+  .nose{
+  	position: absolute;
+  	left:113px;
+  	top:34px;
+  	width:36px;
+  	height:36px;
+  	border-radius:50%;
+  	border:2px solid black;
+  	background:#C93E00
+  }
+  .bai{
+  	width:10px;
+  	height:10px;
+  	position: absolute;
+  	left:20px;
+  	top:10px;
+  	background:radial-gradient(white 20%,#DB8058);
+  	border-radius:5px;
+  }
+  .line{
+  	position: absolute;
+  	left:131px;
+  	top:72px;
+  	width:3px;
+  	height:80px;
+  	background: black
+  }
+  .mous{
+  	width:200px;
+  	height:120px;
+  	position:absolute;
+  	left:35px;
+  	top:30px;
+  	border-bottom:3px solid black;
+  	border-radius:60%;
+  }
+  .zhel{
+  	width:50px;
+  	height:30px;
+  	background:white;
+  	position: absolute;
+  	left:30px;
+  	top:90px;
+  }
+   .zher{
+  	width:50px;
+  	height:30px;
+  	background: white;
+  	position: absolute;
+  	right:30px;
+  	top:90px;
+  }
+  .huzi{
+  	position: absolute;
+  	left:185px;
+  	top:65px;
+  	width:60px;
+  	height:2px;
+  	background: black;
+  	transform:rotate(160deg);
+  }
+  .huzi2{
+     position: absolute;
+  	left:185px;
+  	top:82px;
+  	width:60px;
+  	height:2px;
+  	background: black;
+  }
+  .huzi3{
+  	position: absolute;
+  	left:185px;
+  	top:99px;
+  	width:60px;
+  	height:2px;
+  	background: black;
+  	transform:rotate(20deg);
+  }
+  .huzi4{
+  	position: absolute;
+  	right:185px;
+  	top:65px;
+  	width:60px;
+  	height:2px;
+  	background: black;
+  	transform:rotate(-160deg);
+  }
+  .huzi5{
+     position: absolute;
+  	right:185px;
+  	top:82px;
+  	width:60px;
+  	height:2px;
+  	background: black;
+  }
+  .huzi6{
+  	position: absolute;
+  	right:185px;
+  	top:99px;
+  	width:60px;
+  	height:2px;
+  	background: black;
+  	transform:rotate(-20deg);
+  }
+
+.niu{
+	width:234px;
+	height:24px;
+	border:2px solid black;
+	/*background:gradient(linear,left top,left bottom,from(#ca4100),to(#800400));*/
+	background: -webkit-gradient(linear, left top, left bottom, from(#ca4100), to(#800400));
+	border-radius: 10px;
+	position: absolute;
+	left:40px;
+	bottom:-5px;
+	z-index:20;
+}
+.duzi{
+	width:224px;
+	height:169px;
+	/*background:#0091B8;*/
+	background:linear-gradient(to bottom left, #07BCE9,#0091B8);
+	position: absolute;
+	left:45px;bottom:-169px;
+}
+.xian{
+	width:220px;
+	height:110px;
+	position: absolute;
+	left:0;
+	bottom:0;
+	border-left:2px solid black;
+	border-bottom:2px solid black;
+	border-right:2px solid black;
+	z-index:666;
+
+}
+
+.handleft{
+	position: absolute;
+	left:-57px;
+	top:20px;
+	width:90px;
+	height:60px;
+	background:#029BC4;
+	border-top: 2px solid black;
+	border-bottom:2px solid black;
+	transform:rotate(145deg);
+}
+.zhee{
+	width:50px;
+	height:40px;
+	background:#029BC4;
+	position: absolute;
+	top:-20px;
+
+
+}
+.leftcir{
+	width:65px;
+	height:65px;
+	position: absolute;
+	background: -webkit-gradient(linear, right top, left bottom, from(#fff),color-stop(0.5,#fff),color-stop(0.70,#eee),color-stop(0.8,#ddd), to(#999));
+	left:-90px;
+	top:50px;
+	border:2px solid black;
+	border-radius:50%;
+}
+.handright{
+	position: absolute;
+	right:-57px;
+	top:20px;
+	width:90px;
+	height:60px;
+	background:#05B1DC;
+	border-top: 2px solid black;
+	border-bottom:2px solid black;
+	transform:rotate(35deg);
+}
+.zhen{
+	width:50px;
+	height:40px;
+	background:#05B1DC;
+	position:absolute;
+	top:30px;
+
+
+}
+.rightcir{
+	width:65px;
+	height:65px;
+	position: absolute;
+	background: -webkit-gradient(linear, right top, left bottom, from(#fff),color-stop(0.5,#fff),color-stop(0.70,#eee),color-stop(0.8,#ddd), to(#999));
+	right:-90px;
+	top:50px;
+	border:2px solid black;
+	border-radius:50%;
+}
+.dudu{
+	width:154px;
+	height:154px;
+	border:2px solid black;
+	border-radius: 50%;
+	position: absolute;
+	left:30px;
+	top:-10px;
+	background: -webkit-gradient(linear, right top, left bottom, from(#fff),color-stop(0.75,#fff),color-stop(0.83,#eee),color-stop(0.90,#999),color-stop(0.95,#444), to(#000));
+}
+.ban{
+	width:108px;
+	height:108px;
+	border:2px solid black;
+	position: absolute;
+	left:20px;
+	bottom:20px;
+	border-radius:50%;
+}
+.ju{
+	width:100%;
+	height:38%;
+	border-bottom: 2px solid black;
+	background: white;
+	position: absolute;
+	top:-2px;
+
+}
+.footl{
+	width:125px;
+	height:30px;
+	background: -webkit-gradient(linear, right top, left bottom, from(#fff),color-stop(0.75,#fff),color-stop(0.85,#eee), to(#999));
+    background: -moz-linear-gradient(right top, #fff,#fff 75%, #eee 85%, #999);
+    border: solid 2px #333;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 40px;
+    border-top-right-radius: 60px;
+    border-bottom-right-radius: 60px;
+    -webkit-border-top-left-radius: 80px;
+    -webkit-border-bottom-left-radius: 40px;
+    -webkit-border-top-right-radius: 60px;
+    -webkit-border-bottom-right-radius: 60px;
+    position: absolute;
+    left:-20px;
+    bottom:-32px;
+}
+.footr{
+	width:125px;
+	height:30px;
+	background: -webkit-gradient(linear, right top, left bottom, from(#fff),color-stop(0.75,#fff),color-stop(0.85,#eee), to(#999));
+    background: -moz-linear-gradient(right top, #fff,#fff 75%, #eee 85%, #999);
+    border: solid 2px #333;
+    border-top-left-radius: 60px;
+    border-bottom-left-radius: 60px;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 40px;
+    
+    position: absolute;
+    right:-20px;
+    bottom:-32px;
+}
+.yuan{
+	width:19px;
+	height:19px;
+	border-radius:50%;
+	border-top:2px solid black;
+	border-left:2px solid black;
+	border-right:2px solid black;
+	background:white;
+	position: absolute;
+	left:45%;
+	bottom:-10px;
+	z-index:999;
+	background: -webkit-gradient(linear, right top, left bottom, from(#666),color-stop(0.83,#fff), to(#fff));
+}
+.de{
+	width:44px;
+	height:44px;
+	border-radius:50%;
+	border:2px solid black;
+	background: -webkit-gradient(linear, left top, left bottom, from(#f9f12a),color-stop(0.5, #e9e11a), to(#a9a100));
+	position: absolute;
+	left:38%;
+	top:-10px;
+	z-index:1000;
+}
+.dline{
+	width:40px;
+	height:2px;
+	border:2px solid black;
+	background:#F9F12A;
+	position:absolute;
+	top:10px;
+
+}
+.dcir{
+	width: 12px;
+    height: 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    background: #000;
+    position: relative;
+    top: 20px;
+    left: 15px;
+}
+.under{
+	width:3px;
+    height:20px;
+    background:#000;
+    position: relative;
+    top:15px;
+    left:20px;
+}
+  
+  
+	</style>
+</head>
+<body>
+	<div class="cat">
+		<div class="face">
+            <div class="eyesl">
+            	<div class="qiu"></div>
+            </div>
+            <div class="eyesr">
+            	<div class="qiu1"></div>
+            </div>
+			<div class="mouse">
+				<div class="nose">
+					<div class="bai"></div>
+				</div>
+				<div class="line"></div>
+				<div class="mous"></div>
+				<div class="zhel"></div>
+				<div class="zher"></div>
+				<div class="huzi"></div>
+				<div class="huzi2"></div>
+				<div class="huzi3"></div>
+				<div class="huzi4"></div>
+				<div class="huzi5"></div>
+				<div class="huzi6"></div>
+
+
+			</div>
+			<div class="niu"></div>
+			<div class="duzi">
+				<div class="xian"></div>
+				<div class="handleft">
+					<div class="zhee"></div>
+				</div>
+				<div class="leftcir"></div>
+				<div class="handright">
+					<div class="zhen"></div>
+				</div>
+				<div class="rightcir"></div>
+				<div class="dudu">
+					<div class="ban">
+						<div class="ju"></div>
+					</div>
+				</div>
+				<div class="de">
+					<div class="dline"></div>
+					<div class="dcir"></div>
+					<div class="under"></div>
+				</div>
+				<div class="footl"></div>
+				<div class="footr"></div>
+				<div class="yuan"></div>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>
